@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Kelas – Clovera Learn</title>
+    <link rel="stylesheet" href="styles.css">
+    <!--
+      Halaman detail kelas menampilkan modul-modul dari kelas terpilih.  
+      Pengguna dapat menonton video pembelajaran dan mengerjakan kuis untuk membuka modul berikutnya.  
+      Alur belajar dikontrol melalui script.js.
+    -->
+</head>
+<body data-page="classDetail">
+    <header>
+        <div class="container nav-container">
+            <h1 class="logo">Clovera Learn</h1>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="classes.html" class="active">Kelas</a></li>
+                    <li><a href="forum.html">Forum Lomba</a></li>
+                    <li><a href="tutors.html">Lapak Tutor</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <h2 id="class-title" class="page-title">Judul Kelas</h2>
+        <p id="class-description">Deskripsi kelas akan tampil di sini.</p>
+        <div id="module-container" class="module-container"></div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Clovera Learn</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

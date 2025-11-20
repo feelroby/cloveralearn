@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lapak Tutor – Clovera Learn</title>
+    <link rel="stylesheet" href="styles.css">
+    <!--
+      Halaman Lapak Tutor menampilkan para tutor freelancer yang menawarkan jasanya.  
+      Setiap kartu menampilkan nama, keahlian, rating dan tombol hubungi.  
+      Pengguna dapat melihat lebih detail atau menghubungi tutor melalui modal yang sederhana.
+    -->
+</head>
+<body data-page="tutors">
+    <header>
+        <div class="container nav-container">
+            <h1 class="logo">Clovera Learn</h1>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="classes.html">Kelas</a></li>
+                    <li><a href="forum.html">Forum Lomba</a></li>
+                    <li><a href="tutors.html" class="active">Lapak Tutor</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <h2 class="page-title">Lapak Tutor</h2>
+        <p>Temukan tutor ahli yang siap membantu belajar atau konsultasi. Klik tombol untuk melihat detail kontak.</p>
+        <div id="tutor-list" class="cards-grid"></div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Clovera Learn</p>
+        </div>
+    </footer>
+    <!-- Modal kontak tutor -->
+    <div id="contact-modal" class="modal hidden">
+        <div class="modal-content">
+            <span id="modal-close" class="modal-close">&times;</span>
+            <h3 id="modal-title">Hubungi Tutor</h3>
+            <p id="modal-body">Kontak akan muncul di sini.</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

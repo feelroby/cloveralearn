@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Kelas – Clovera Learn</title>
+    <link rel="stylesheet" href="styles.css">
+    <!--
+      Halaman kelas menampilkan daftar kelas yang tersedia.  
+      Setiap kelas memiliki nama, deskripsi singkat dan tombol untuk membuka modul.  
+      Data kelas diisi secara dinamis melalui script.js.
+    -->
+</head>
+<body data-page="classes">
+    <header>
+        <div class="container nav-container">
+            <h1 class="logo">Clovera Learn</h1>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="classes.html" class="active">Kelas</a></li>
+                    <li><a href="forum.html">Forum Lomba</a></li>
+                    <li><a href="tutors.html">Lapak Tutor</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <h2 class="page-title">Daftar Kelas</h2>
+        <p>Berikut adalah kelas-kelas yang tersedia di Clovera Learn. Klik salah satu kelas untuk mulai belajar.</p>
+        <div id="classes-container" class="cards-grid"></div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Clovera Learn</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

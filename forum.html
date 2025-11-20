@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum Lomba – Clovera Learn</title>
+    <link rel="stylesheet" href="styles.css">
+    <!--
+      Halaman Forum Lomba memungkinkan pengguna menjelajahi dan menyaring poster lomba.  
+      Tersedia filter berdasarkan wilayah, mata kuliah dan jenjang pendidikan.  
+      Konten poster diisi secara dinamis dari dataset pada script.js.
+    -->
+</head>
+<body data-page="forum">
+    <header>
+        <div class="container nav-container">
+            <h1 class="logo">Clovera Learn</h1>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="classes.html">Kelas</a></li>
+                    <li><a href="forum.html" class="active">Forum Lomba</a></li>
+                    <li><a href="tutors.html">Lapak Tutor</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <h2 class="page-title">Forum Lomba</h2>
+        <p>Temukan poster lomba sesuai minatmu. Gunakan filter di bawah untuk menyaring hasil.</p>
+        <div class="filters">
+            <label>
+                Wilayah:
+                <select id="filter-region">
+                    <option value="all">Semua</option>
+                    <option value="Nasional">Nasional</option>
+                    <option value="Provinsi">Provinsi</option>
+                    <option value="Kota">Kota</option>
+                </select>
+            </label>
+            <label>
+                Mata Kuliah:
+                <select id="filter-major">
+                    <option value="all">Semua</option>
+                    <option value="Akuntansi">Akuntansi</option>
+                    <option value="Bahasa">Bahasa</option>
+                    <option value="Matematika">Matematika</option>
+                </select>
+            </label>
+            <label>
+                Jenjang:
+                <select id="filter-level">
+                    <option value="all">Semua</option>
+                    <option value="Universitas">Universitas</option>
+                    <option value="SMA">SMA</option>
+                    <option value="Umum">Umum</option>
+                </select>
+            </label>
+            <button id="apply-filters" class="btn small">Terapkan Filter</button>
+        </div>
+        <div id="competition-list" class="cards-grid"></div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Clovera Learn</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

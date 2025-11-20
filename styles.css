@@ -1,0 +1,335 @@
+/*
+ * Gaya utama untuk demo platform Clovera Learn.  
+ * Palet warna modern dan layout responsif diadopsi agar nyaman dibaca.  
+ * Kode ini cukup singkat namun cukup untuk mendemokan konsep.
+ */
+
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #f7f9fc;
+  --accent-color: #ff9f1c;
+  --text-color: #333;
+  --light-text: #666;
+  --border-radius: 8px;
+  --transition-speed: 0.2s;
+}
+
+/* utilitas */
+.hidden {
+  display: none !important;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  transition: background-color var(--transition-speed);
+}
+
+nav a:hover,
+nav a.active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.page-title {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+
+/* Hero sections */
+.hero {
+  background-color: #fff;
+  padding: 2rem 0;
+}
+
+.hero.alt {
+  background-color: var(--secondary-color);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 2rem;
+}
+
+.hero-text h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.75rem;
+}
+
+.hero-text p {
+  margin-bottom: 1.5rem;
+  color: var(--light-text);
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: var(--border-radius);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  transition: background-color var(--transition-speed);
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.btn.small {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+}
+
+/* Cards grid */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-tags {
+  font-size: 0.85rem;
+  color: var(--light-text);
+  margin-bottom: 0.5rem;
+}
+
+.card-desc {
+  flex: 1;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  color: var(--light-text);
+}
+
+.card-actions {
+  margin-top: auto;
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.filters label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+}
+
+.filters select {
+  padding: 0.4rem;
+  border-radius: var(--border-radius);
+  border: 1px solid #ccc;
+}
+
+/* Module container */
+.module-container {
+  margin-top: 1.5rem;
+}
+
+.module {
+  margin-bottom: 2rem;
+  border: 1px solid #e0e0e0;
+  border-radius: var(--border-radius);
+  background: #fff;
+  padding: 1rem;
+}
+
+.module h3 {
+  margin-top: 0;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  margin-bottom: 1rem;
+}
+
+.video-wrapper iframe,
+.video-wrapper video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Quiz */
+.quiz {
+  margin-top: 1rem;
+}
+
+.quiz-question {
+  margin-bottom: 1rem;
+}
+
+.quiz-options label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.quiz-result {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  border-radius: var(--border-radius);
+  font-weight: bold;
+}
+
+.quiz-result.pass {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.quiz-result.fail {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Rating stars */
+.stars {
+  color: #f4c542;
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .hero-image {
+    order: -1;
+  }
+}
